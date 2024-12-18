@@ -15,18 +15,19 @@
     <form action="/predict" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/*" required>
 
-        <div id="audience">
-            <input type="radio" id="famille" name="famille" value="famille">
+        <div>
+            <input type="radio" id="famille" name="audience" value="famille">
             <label for="famille">Famille</label><br>
 
-            <input type="radio" id="amis" name="amis" value="amis">
+            <input type="radio" id="amis" name="audience" value="amis">
             <label for="amis">Amis</label><br>
 
-            <input type="radio" id="collegues" name="collegues" value="collegues">
+            <input type="radio" id="collegues" name="audience" value="collegues">
             <label for="collegues">collegues</label><br>
         </div>
 
         <button type="submit">Predict</button>
+
     </form>
 
 </body>

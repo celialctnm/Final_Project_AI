@@ -1,0 +1,5 @@
+groq~=0.13.1
+torch~=2.5.1+cu118
+transformers~=4.47.1
+pillow~=10.2.0
+Flask~=3.1.0

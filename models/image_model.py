@@ -2,6 +2,8 @@ from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoToken
 import torch
 from PIL import Image
 
+from models.text_model import get_adapted_captions
+
 model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 feature_extractor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
@@ -13,7 +15,7 @@ max_length = 16
 num_beams = 4
 gen_kwargs = {"max_length": max_length, "num_beams": num_beams}
 
-def predict_caption(image_path):
+def get_image_caption(image_path):
 	image = Image.open(image_path)
 	if image.mode != "RGB":
 		image = image.convert("RGB")
@@ -25,6 +27,8 @@ def predict_caption(image_path):
 
 	preds = tokenizer.batch_decode(output_ids, skip_special_tokens=True)
 	preds = [pred.strip() for pred in preds]
+	preds = " ".join(preds)
+	print("Caption from image:", preds)
 	return preds
 
-print(predict_caption("../data/images/Mount_Yu_Shan_-_Taiwan.jpg"))
+#base_caption = get_image_caption("../data/images/Mount_Yu_Shan_-_Taiwan.jpg")

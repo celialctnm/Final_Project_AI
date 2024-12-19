@@ -1,6 +1,8 @@
 from flask import *
 import os
-from openai import OpenAI
+
+from models.image_model import get_image_caption
+from models.text_model import get_adapted_captions
 
 # convention à respecter
 # images, css, tout mettre dans le répertoire static sinon ça marche pas
@@ -16,31 +18,9 @@ UPLOAD_FOLDER = 'static/images'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# key for chatgpt
-client = OpenAI(
-    api_key="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")
-
-
 @app.route('/')
 def home():
     return render_template('index.html')
-
-
-def create_model():
-    model = "model"
-    return model
-
-
-def chat_with_gpt(content):
-    completion = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "user", "content": content}
-        ]
-    )
-    description = completion.choices[0].message.content
-    return description
-
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -56,12 +36,12 @@ def predict():
         file.filename = "user_upload.png"
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filepath)
-
-        # mise en place du model
-        model = create_model()
-
-        description = chat_with_gpt("Can you write a caption for my instagram post, my audience is my " + audience + ".The photo represents " + model)
         print(filepath)
+
+        base_description = get_image_caption(filepath)
+        # TODO: adapter si on veut afficher toutes les options des descriptions générées (il faut adapter le result.html pour prendre une liste de string)
+        description = get_adapted_captions(base_description, "funny", audience)[0]
+
     return render_template('result.html', audience=audience, image_path=filepath, description=description)
 
 

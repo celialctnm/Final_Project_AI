@@ -22,14 +22,26 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def home():
     return render_template('index.html')
 
+@app.route('/home')
+def homePage():
+    return render_template('home.html')
+
+@app.route('/how')
+def how():
+    return render_template('how.html')
+
+@app.route('/ourTeam')
+def team():
+    return render_template('ourTeam.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     audience = request.form.get('audience')
     if not audience:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
 
     if 'file' not in request.files:
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
     file = request.files['file']
 
     if file:

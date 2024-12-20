@@ -6,8 +6,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>APDBOA</title>
-</head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"></head>
 <body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="../static/images/logo.png" alt="Logo" height="100"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-item">Home 🏠</a></li>
+            <li><a href="home" class="nav-item active">Prompt ✨</a></li>
+            <li><a href="how" class="nav-item">How ? 🤔</a></li>
+            <li><a href="ourTeam" class="nav-item">Our Team 🤝</a></li>
+        </ul>
+     </nav>
 
     <h1> Adaptative Post Description Based On Audience</h1>
     <h2> Result </h2>

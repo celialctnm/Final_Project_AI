@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Yanone+Kaffeesatz:wght@400;600;700&display=swap');
+
+/* GLOBAL STYLES */
+body {
+    background: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+
+
+   }
+
+    a {
+        display: flex;
+        justify-content: space-between; /* Align content to the left */
+        text-decoration: none; /* Enlève le souligné par défaut du lien */
+        color: inherit; /* Conserve la couleur du texte de son parent */
+        padding-left: 10em; /* Add space on the left */
+        padding-right: 10em;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+   /* Exemple pour un curseur global */
+   * {
+    cursor: url('./images/cursor.png') 50 50, auto;
+  }
+
+  .logo {
+    display: flex;
+    height: 100vh;
+  }
+
+  .logo img {
+    width: 12em;
+    height: 12em;
+  }
+
+
+  /* STYLING TYPEWRITER DIV */
+  .typewriter {
+    text-align: left; /* Align text to the left */
+  }
+
+  /* STYLING H1 WITH TYPEWRITER EFFECT */
+  .typewriter h1 {
+    color: #333;
+    font-family: "Yanone Kaffeesatz", serif;
+    font-size: 9em; /* Increase text size */
+    line-height: 0.75; /* Space between lines */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: 0.1em;
+    margin: 0;
+    animation: typing 2s steps(20, end) forwards;
+  }
+
+  /* Make the first letter of each word larger */
+  .typewriter h1 span:first-letter {
+    font-size: 4.5rem; /* Adjust as needed */
+    color: orange;
+  }
+
+  /* ANIMATIONS */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }

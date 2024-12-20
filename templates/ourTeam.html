@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ourTeam.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><img src="../static/images/logo.png" alt="Logo" height="100"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-item">Home 🏠</a></li>
+            <li><a href="home" class="nav-item">Prompt ✨</a></li>
+            <li><a href="how" class="nav-item">How ? 🤔</a></li>
+            <li><a href="ourTeam" class="nav-item active">Our Team 🤝</a></li>
+        </ul>
+    </nav>
+
+    <div class="pageContent">
+        <h1>Our Team</h1>
+        <img src="../static/images/line.png" alt="line">
+    </div>
+
+    <div class="teamMembers">
+        <div class="quick-add-container">
+            <div class="quick-add-box">
+                <span class="close-btn">&#10006;</span>
+                <div class="image-container">
+                    <img src="../static/images/loric.jpg" alt="Image" class="profile-img">
+                </div>
+                <div class="details">
+                    <span class="name">Loric</span>
+                    <span class="desc">113522904</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-add-container">
+            <div class="quick-add-box">
+                <span class="close-btn">&#10006;</span>
+                <div class="image-container">
+                    <img src="../static/images/celia.jpg" alt="Image" class="profile-img">
+                </div>
+                <div class="details">
+                    <span class="name">Célia</span>
+                    <span class="desc">113522903</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-add-container">
+            <div class="quick-add-box">
+                <span class="close-btn">&#10006;</span>
+                <div class="image-container">
+                    <img src="../static/images/marie.jpg" alt="Image" class="profile-img">
+                </div>
+                <div class="details">
+                    <span class="name">Marie</span>
+                    <span class="desc">113522906</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn">Add</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -31,6 +31,7 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     font-size: 2.5em;
+    margin: 0.5em;
 }
 
 .nav-item:hover, .nav-item:focus {

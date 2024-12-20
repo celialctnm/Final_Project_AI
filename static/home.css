@@ -57,3 +57,14 @@ body {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+
+label{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0.25em;
+}

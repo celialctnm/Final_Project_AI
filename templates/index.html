@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>APDBOA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
@@ -11,15 +11,26 @@
 <body>
 
     <a href="home">
-        <div class="typewriter">
-            <h1><span style="font-size: 2em;">A</span>udience</h1>
-            <h1><span style="font-size: 2em;">M</span>ood</h1>
-            <h1><span style="font-size: 2em;">L</span>ens</h1>
+
+        <div class="keyboard">
+          <span class="key">Audience</span>
+          <span class="key">Mood</span>
+          <span class="key">Lens
+              <div class="logo">
+                <img src="../static/images/logo.png" alt="Logo" />
+            </div>
+          </span>
         </div>
 
-        <div class="logo">
-            <img src="../static/images/logo.png" alt="Logo" />
+        <div class="imgHome">
+
+            <div class="thinking">
+                ✨
+            </div>
         </div>
+
     </a>
 </body>
+
 </html>
+

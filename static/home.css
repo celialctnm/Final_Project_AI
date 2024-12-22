@@ -40,6 +40,45 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
+.emotionSelection button:nth-child(1) { /* Happy */
+    background-color: #FFDFBA; /* Pastel orange */
+}
+
+.emotionSelection button:nth-child(2) { /* Sad */
+    background-color: #BFDFFF; /* Pastel blue */
+}
+
+.emotionSelection button:nth-child(3) { /* Angry */
+    background-color: #FFBABA; /* Pastel red */
+}
+
+.emotionSelection button:nth-child(4) { /* Surprised */
+    background-color: #FFBCF1; /* Pastel pink */
+}
+
+.emotionSelection button:nth-child(5) { /* Love */
+    background-color: #FFBFD3; /* Pastel light pink */
+}
+
+.emotionSelection button:nth-child(6) { /* Funny */
+    background-color: #FFE1A8; /* Pastel yellow */
+}
+
+.emotionSelection button:nth-child(7) { /* Confused */
+    background-color: #D4F1C5; /* Pastel green */
+}
+
+.emotionSelection button:nth-child(8) { /* Shocked */
+    background-color: #FFB9B9; /* Pastel coral */
+}
+
+.emotionSelection button:nth-child(9) { /* Bored */
+    background-color: #E0BBE4; /* Pastel lavender */
+}
+
+
+
 .emotionSelection button.selected {
         background-color: #5e00fd;
     }

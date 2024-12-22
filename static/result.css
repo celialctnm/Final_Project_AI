@@ -1,15 +1,24 @@
 .polaroid img {
 	width:98%;
 }
+
 .polaroid {
-	float: left;
-	position: relative;
-	min-width: 250px;
-	max-width: 350px;
-	background-color: #eee  ;
-	padding: 10px 10px 15px 10px;
-	margin: 5px;
+    float: left;
+    position: relative;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: #eee;
+    padding: 10px 10px 15px 10px;
+    margin: 5px;
+    transform: rotate(-5deg); /* Inclinaison de 5 degrés vers la gauche */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre subtile */
+    transition: transform 0.3s ease; /* Transition pour un effet plus fluide */
 }
+
+.polaroid:hover {
+    transform: rotate(0deg); /* Redresse l'image au survol */
+}
+
 
 .info {
 	vertical-align: middle;

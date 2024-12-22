@@ -37,6 +37,10 @@ def team():
 @app.route('/predict', methods=['POST'])
 def predict():
     audience = request.form.get('audience')
+
+    tone = request.form.get('tone')
+    print("Tone:", tone)
+
     if not audience:
         return redirect(url_for('home'))
 
@@ -52,9 +56,9 @@ def predict():
 
         base_description = get_image_caption(filepath)
         # TODO: adapter si on veut afficher toutes les options des descriptions générées (il faut adapter le result.html pour prendre une liste de string)
-        description = get_adapted_captions(base_description, "funny", audience)[0]
+        description = get_adapted_captions(base_description, tone, audience)[0]
 
-    return render_template('result.html', audience=audience, image_path=filepath, description=description)
+    return render_template('result.html', audience=audience, tone=tone, image_path=filepath, description=description)
 
 
 if __name__ == '__main__':

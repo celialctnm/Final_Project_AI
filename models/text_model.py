@@ -5,7 +5,7 @@ import os
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
-
+# 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
 def get_adapted_captions(base_caption, tone, audience):
     try:
         # Créez une requête pour obtenir une description Instagram personnalisée
@@ -15,9 +15,10 @@ def get_adapted_captions(base_caption, tone, audience):
                 {
                     "role": "user",
                     "content": "(Generate only each option seperated by a newline character, no other text please) \
-                                Create a custom description for this description: " + base_caption + \
-                                " using a tone that is: " + tone + \
-                                " adapted to the audience of type: " + audience
+                                Create a custom description (you can add hashtag if necessary) for a social media post for this description: " + base_caption + \
+                                " using the following tone and mood : " + tone + \
+                                " adapted to the audience of type : " + audience
+
                 }
             ],
             temperature=1,

@@ -37,38 +37,37 @@
              <div class="step">
                  <h2>2. Audience</h2>
                  <div>
-                    <input type="radio" id="famille" name="audience" value="famille">
+                    <input type="radio" id="famille" name="audience" value="family">
                     <label for="famille">Family 👨‍👩‍👧‍👦</label><br>
 
-                    <input type="radio" id="amis" name="audience" value="amis">
+                    <input type="radio" id="amis" name="audience" value="friends">
                     <label for="amis">Friends 🤗</label><br>
 
-                    <input type="radio" id="collegues" name="audience" value="collegues">
+                    <input type="radio" id="collegues" name="audience" value="colleagues">
                     <label for="collegues">Colleagues 💼</label><br>
 
-                    <input type="radio" id="amoureux" name="audience" value="amoureux">
+                    <input type="radio" id="amoureux" name="audience" value="partner">
                     <label for="amoureux">Partner ❤️</label><br>
                 </div>
              </div>
              <div class="step">
                  <h2>3. Emotion</h2>
 
+                 <input type="hidden" id="tone" name="tone" value="">
                  <div class="emotionSelection">
-                    <button type="button" class="emotion-btn" value="Happy">😊</button>
-                    <button type="button" class="emotion-btn" value="Sad">😢</button>
-                    <button type="button" class="emotion-btn" value="Angry">😡</button>
-                    <button type="button" class="emotion-btn" value="Surprised">😲</button>
-                    <button type="button" class="emotion-btn" value="Love">😍</button>
-                    <button type="button" class="emotion-btn" value="Laughing">😂</button>
-                    <button type="button" class="emotion-btn" value="Confused">😕</button>
-                    <button type="button" class="emotion-btn" value="Shocked">😱</button>
-                    <button type="button" class="emotion-btn" value="Bored">😴</button>
+                    <button type="button" class="emotion-btn" value="Happy" onclick="selectEmotion('Happy', this)">😊</button>
+                    <button type="button" class="emotion-btn" value="Sad" onclick="selectEmotion('Sad', this)">😢</button>
+                    <button type="button" class="emotion-btn" value="Angry" onclick="selectEmotion('Angry', this)">😡</button>
+                    <button type="button" class="emotion-btn" value="Surprised" onclick="selectEmotion('Surprised', this)">😲</button>
+                    <button type="button" class="emotion-btn" value="Love" onclick="selectEmotion('Love', this)">😍</button>
+                    <button type="button" class="emotion-btn" value="Funny" onclick="selectEmotion('Funny', this)">😂</button>
+                    <button type="button" class="emotion-btn" value="Confused" onclick="selectEmotion('Confused', this)">😕</button>
+                    <button type="button" class="emotion-btn" value="Shocked" onclick="selectEmotion('Shocked', this)">😱</button>
+                    <button type="button" class="emotion-btn" value="Bored" onclick="selectEmotion('Bored', this)">😴</button>
                 </div>
 
              </div>
          </div>
-
-
 
         <div class="buttonSubmit">
             <button class="submit" type="submit">Predict 👉</button>
@@ -77,4 +76,17 @@
     </form>
 
 </body>
+
+    <script>
+        function selectEmotion(emotion, btn) {
+            document.getElementById('tone').value = emotion;
+
+            const buttons = document.querySelectorAll('.emotionSelection button');
+            buttons.forEach(button => button.classList.remove('selected'));
+
+            btn.classList.add('selected');
+            console.log(document.getElementById('tone').value)
+        }
+    </script>
+
 </html>

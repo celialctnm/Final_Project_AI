@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>APDBOA</title>
+    <title>AML - Home</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
 </head>
@@ -55,16 +56,17 @@
 
                  <input type="hidden" id="tone" name="tone" value="">
                  <div class="emotionSelection">
-                    <button type="button" class="emotion-btn" value="Happy" onclick="selectEmotion('Happy', this)">😊</button>
-                    <button type="button" class="emotion-btn" value="Sad" onclick="selectEmotion('Sad', this)">😢</button>
-                    <button type="button" class="emotion-btn" value="Angry" onclick="selectEmotion('Angry', this)">😡</button>
-                    <button type="button" class="emotion-btn" value="Surprised" onclick="selectEmotion('Surprised', this)">😲</button>
-                    <button type="button" class="emotion-btn" value="Love" onclick="selectEmotion('Love', this)">😍</button>
-                    <button type="button" class="emotion-btn" value="Funny" onclick="selectEmotion('Funny', this)">😂</button>
-                    <button type="button" class="emotion-btn" value="Confused" onclick="selectEmotion('Confused', this)">😕</button>
-                    <button type="button" class="emotion-btn" value="Shocked" onclick="selectEmotion('Shocked', this)">😱</button>
-                    <button type="button" class="emotion-btn" value="Bored" onclick="selectEmotion('Bored', this)">😴</button>
+                    <button type="button" class="emotion-btn" value="Happy" onclick="selectEmotion('Happy', this)" title="Happy">😊</button>
+                    <button type="button" class="emotion-btn" value="Sad" onclick="selectEmotion('Sad', this)" title="Sad">😢</button>
+                    <button type="button" class="emotion-btn" value="Angry" onclick="selectEmotion('Angry', this)" title="Angry">😡</button>
+                    <button type="button" class="emotion-btn" value="Surprised" onclick="selectEmotion('Surprised', this)" title="Surprised">😲</button>
+                    <button type="button" class="emotion-btn" value="Love" onclick="selectEmotion('Love', this)" title="Love">😍</button>
+                    <button type="button" class="emotion-btn" value="Funny" onclick="selectEmotion('Funny', this)" title="Funny">😂</button>
+                    <button type="button" class="emotion-btn" value="Confused" onclick="selectEmotion('Confused', this)" title="Confused">😕</button>
+                    <button type="button" class="emotion-btn" value="Shocked" onclick="selectEmotion('Shocked', this)" title="Shocked">😱</button>
+                    <button type="button" class="emotion-btn" value="Bored" onclick="selectEmotion('Bored', this)" title="Bored">😴</button>
                 </div>
+
 
              </div>
          </div>
@@ -74,6 +76,12 @@
         </div>
 
     </form>
+
+    <footer class="footer">
+        <h2 class="footer-title">AML</h2>
+        <p class="footer-copyright">© 2024 AML Team. All rights reserved.</p>
+    </footer>
+
 
 </body>
 

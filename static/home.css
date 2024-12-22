@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Yanone+Kaffeesatz:wght@400;600;700&display=swap');
 
-
 body {
     font-family: "Yanone Kaffeesatz", serif;
     margin: 0;
@@ -33,55 +32,114 @@ body {
 }
 
 .emotionSelection button{
-    font-size: 4em;
+    font-size: 3em;
     margin: 0.1em;
     border: 1px solid #e1e4e8;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: transparent;
+    padding: 0.25em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.emotionSelection button:nth-child(1) { /* Happy */
-    background-color: #FFDFBA; /* Pastel orange */
+.emotionSelection button::after {
+    content: "";
+    position: absolute;
+    visibility: hidden;
+    font-size: 0.4em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+    height: max-content;
 }
 
-.emotionSelection button:nth-child(2) { /* Sad */
-    background-color: #BFDFFF; /* Pastel blue */
+.emotionSelection button:nth-child(1) {
+    background-color: #FFDFBA;
 }
 
-.emotionSelection button:nth-child(3) { /* Angry */
-    background-color: #FFBABA; /* Pastel red */
+.emotionSelection button:nth-child(2) {
+    background-color: #BFDFFF;
 }
 
-.emotionSelection button:nth-child(4) { /* Surprised */
-    background-color: #FFBCF1; /* Pastel pink */
+.emotionSelection button:nth-child(3) {
+    background-color: #FFBABA;
 }
 
-.emotionSelection button:nth-child(5) { /* Love */
-    background-color: #FFBFD3; /* Pastel light pink */
+.emotionSelection button:nth-child(4) {
+    background-color: #FFBCF1;
 }
 
-.emotionSelection button:nth-child(6) { /* Funny */
-    background-color: #FFE1A8; /* Pastel yellow */
+.emotionSelection button:nth-child(5) {
+    background-color: #FFBFD3;
 }
 
-.emotionSelection button:nth-child(7) { /* Confused */
-    background-color: #D4F1C5; /* Pastel green */
+.emotionSelection button:nth-child(6) {
+    background-color: #FFE1A8;
 }
 
-.emotionSelection button:nth-child(8) { /* Shocked */
-    background-color: #FFB9B9; /* Pastel coral */
+.emotionSelection button:nth-child(7) {
+    background-color: #D4F1C5;
 }
 
-.emotionSelection button:nth-child(9) { /* Bored */
-    background-color: #E0BBE4; /* Pastel lavender */
+.emotionSelection button:nth-child(8) {
+    background-color: #FFB9B9;
 }
 
-
+.emotionSelection button:nth-child(9) {
+    background-color: #E0BBE4;
+}
 
 .emotionSelection button.selected {
-        background-color: #5e00fd;
-    }
+    background-color: #5e00fd;
+}
+
+.emotionSelection button:hover{
+    background-color: rgba(0, 0, 0, 0.1); /* Ajout de la transparence survolée */
+}
+
+.emotionSelection button:hover::after {
+    visibility: visible;
+}
+
+.emotionSelection button:nth-child(1):hover::after {
+    content: "Happy";
+}
+
+.emotionSelection button:nth-child(2):hover::after {
+    content: "Sad";
+}
+
+.emotionSelection button:nth-child(3):hover::after {
+    content: "Angry";
+}
+
+.emotionSelection button:nth-child(4):hover::after {
+    content: "Surprised";
+}
+
+.emotionSelection button:nth-child(5):hover::after {
+    content: "Love";
+}
+
+.emotionSelection button:nth-child(6):hover::after {
+    content: "Funny";
+}
+
+.emotionSelection button:nth-child(7):hover::after {
+    content: "Confused";
+}
+
+.emotionSelection button:nth-child(8):hover::after {
+    content: "Shocked";
+}
+
+.emotionSelection button:nth-child(9):hover::after {
+    content: "Bored";
+}
 
 .submit{
     font-size: 3em;
@@ -90,6 +148,8 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: "Yanone Kaffeesatz", serif;
     background-color: #28a745;
+    margin-bottom: 0.5em;
+    margin-top: 0.25em;
 }
 
 .buttonSubmit{
@@ -99,6 +159,13 @@ body {
     margin-right: 4em;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1em;
 }
 
 label{

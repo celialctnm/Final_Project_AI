@@ -7,16 +7,19 @@
     position: relative;
     min-width: 250px;
     max-width: 350px;
-    background-color: #eee;
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
     padding: 10px 10px 15px 10px;
     margin: 5px;
-    transform: rotate(-5deg); /* Inclinaison de 5 degrés vers la gauche */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre subtile */
-    transition: transform 0.3s ease; /* Transition pour un effet plus fluide */
+    transform: rotate(-5deg);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+	margin-bottom: 3em;
+	margin-top: 3em;
 }
 
 .polaroid:hover {
-    transform: rotate(0deg); /* Redresse l'image au survol */
+    transform: rotate(0deg);
 }
 
 
@@ -43,8 +46,10 @@
 }
 
 .buttonDiv button{
-	margin: 0.25em;
-	font-size: 1.5em;
+	margin: 0.10em;
+    font-size: 1.5em;
+    background: transparent;
+    border: none;
 }
 
 p{

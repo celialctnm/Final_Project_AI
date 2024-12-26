@@ -1,14 +1,15 @@
 from groq import Groq
 import os
 
-# Configurez votre clé API
+# API key configured on your computer
+# Can be generated on https://console.groq.com/keys
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
-# 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
+
 def get_adapted_captions(base_caption, tone, audience):
     try:
-        # Créez une requête pour obtenir une description Instagram personnalisée
+        # Create a request for LLM model with the parameters
         completion = client.chat.completions.create(
             model="llama3-70b-8192",
             messages=[
@@ -28,11 +29,10 @@ def get_adapted_captions(base_caption, tone, audience):
             stop=None,
         )
 
-        # Accéder et afficher le contenu généré
+        # Access and return the generated content
         if completion and completion.choices:
             generated_content = completion.choices[0].message.content
             print("Content generated.\n")
-            #print(generated_content)
             descriptions = [line.strip() for line in generated_content.split("\n") if line.strip()]
             print("Options for adapted captions:", descriptions)
             return descriptions

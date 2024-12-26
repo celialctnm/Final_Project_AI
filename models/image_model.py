@@ -2,8 +2,6 @@ from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoToken
 import torch
 from PIL import Image
 
-from models.text_model import get_adapted_captions
-
 model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 feature_extractor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
@@ -30,5 +28,3 @@ def get_image_caption(image_path):
 	preds = " ".join(preds)
 	print("Caption from image:", preds)
 	return preds
-
-#base_caption = get_image_caption("../data/images/Mount_Yu_Shan_-_Taiwan.jpg")
